@@ -81,12 +81,12 @@ function App(props) {
 
   const all = good + neutral + bad;
 
-  const doAverage = (a, b, d) => {
+  const calcAverage = (a, b, d) => {
     let c = -b;
     let ans = (Number(a) + Number(c)) / d;
     return ans;
   };
-  const doPositive = (a, b) => {
+  const calcPositive = (a, b) => {
     let pos = (parseFloat(a) / parseFloat(b)) * 100;
     return pos;
   };
