@@ -12,8 +12,8 @@ const Title = (props) => {
 //Reusable Button component
 const Button = ({ onClick, text }) => {
 	return (
-		<div class='btnCompo'>
-			<button class='btn' onClick={onClick}>
+		<div className='btnCompo'>
+			<button className='btn' onClick={onClick}>
 				{text}
 			</button>
 		</div>
