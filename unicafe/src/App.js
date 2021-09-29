@@ -93,22 +93,21 @@ function App(props) {
 	//Calculate the total of  all the counts
 	const all = good + neutral + bad;
 
-	/*The function below accepts good as positive, the 
-	impact of neutral is zero so we simply exclude it but bad is 
-	negative, so negate the variable appropriately. The function 
-	basically returns the impact of each variable  */
+	/*The function below accepts a, b and d, change the sign of b 
+	and return an average using d a the devisor. The function 
+	basically returns the impact of each variable */
 	const calcAverage = (a, b, d) => {
 		let c = -b;
 
-		let ans = (Number(a) + Number(c)) / d;
-		return ans;
+		let average = (Number(a) + Number(c)) / d;
+		return average;
 	};
 
 	/*The function below calculate the percentage of responds that 
 	is positive which is good responds by total times 100*/
 	const calcPositive = (a, b) => {
-		let pos = (parseFloat(a) / parseFloat(b)) * 100;
-		return pos;
+		let positive = (parseFloat(a) / parseFloat(b)) * 100;
+		return positive;
 	};
 
 	/* we calculate the average by invoking the calAverage function */
