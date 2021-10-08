@@ -50,18 +50,18 @@ const Statistics = (props) => {
 	const good = props.good;
 	const neutral = props.neutral;
 	const bad = props.bad;
-	const all = props.all;
+	const totalOfAll = props.totalOfAll;
 	const average = props.average;
 	const positive = props.positive;
 
-	return all === 0 ? (
+	return totalOfAll === 0 ? (
 		<NoFeedBack />
 	) : (
 		<div>
 			<StatisticLine text='good' value={good} />
 			<StatisticLine text='neutral' value={neutral} />
 			<StatisticLine text='bad' value={bad} />
-			<StatisticLine text='all' value={all} />
+			<StatisticLine text='totalOfAll' value={totalOfAll} />
 			<StatisticLine text='average' value={average} />
 			<StatisticLine text='positive' value={positive} />
 		</div>
@@ -69,7 +69,7 @@ const Statistics = (props) => {
 };
 
 // The main App component
-function App(props) {
+function App() {
 	//Hooks to manage states
 	const [good, setGood] = useState(0);
 	const [neutral, setNeutral] = useState(0);
@@ -90,8 +90,12 @@ function App(props) {
 		setBad(bad + 1);
 	};
 
-	//Calculate the total of  all the counts
-	const all = good + neutral + bad;
+	//Calculate the total of all the counts
+	const totalOfAll = good + neutral + bad;
+	// const totalOfAll = function (a, b, c) {
+	// 	let allVotes = a + b + c;
+	// 	return allVotes;
+	// };
 
 	/*The function below accepts a, b and d, change the sign of b 
 	and return an average using d a the devisor. The function 
@@ -111,10 +115,10 @@ function App(props) {
 	};
 
 	/* we calculate the average by invoking the calAverage function */
-	const average = calcAverage(good, bad, all);
+	const average = calcAverage(good, bad, totalOfAll);
 
 	/*we calculate the positive percentage by invoking calcPositive function*/
-	const positivePercentage = `${calcPositive(good, all)}%`;
+	const positivePercentage = `${calcPositive(good, totalOfAll)}%`;
 
 	return (
 		<div>
@@ -128,7 +132,7 @@ function App(props) {
 				good={good}
 				neutral={neutral}
 				bad={bad}
-				all={all}
+				totalOfAll={totalOfAll}
 				average={average}
 				positive={positivePercentage}
 			/>
