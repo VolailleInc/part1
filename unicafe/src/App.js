@@ -40,7 +40,7 @@ const StatisticLine = ({ value, text }) => {
 const NoFeedBack = () => {
 	return (
 		<div>
-			<p>No feedback given</p>
+			<p>No feedback given!</p>
 		</div>
 	);
 };
