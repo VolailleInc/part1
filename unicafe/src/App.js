@@ -103,15 +103,13 @@ function App() {
 	const calcAverage = (a, b, d) => {
 		let c = -b;
 
-		let average = (Number(a) + Number(c)) / d;
-		return average;
+		return (Number(a) + Number(c)) / d;
 	};
 
 	/*The function below calculate the percentage of responds that 
 	is positive which is good responds by total times 100*/
 	const calcPositive = (a, b) => {
-		let positive = (parseFloat(a) / parseFloat(b)) * 100;
-		return positive;
+		return (parseFloat(a) / parseFloat(b)) * 100;
 	};
 
 	/* we calculate the average by invoking the calAverage function */
