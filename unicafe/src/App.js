@@ -61,7 +61,7 @@ const Statistics = (props) => {
 			<StatisticLine text='good' value={good} />
 			<StatisticLine text='neutral' value={neutral} />
 			<StatisticLine text='bad' value={bad} />
-			<StatisticLine text='totalOfAll' value={totalOfAll} />
+			<StatisticLine text='all' value={totalOfAll} />
 			<StatisticLine text='average' value={average} />
 			<StatisticLine text='positive' value={positive} />
 		</div>
@@ -91,7 +91,7 @@ function App() {
 	};
 
 	//Calculate the total of all the counts
-	const totalOfAll = good + neutral + bad;
+	const all = good + neutral + bad;
 	// const totalOfAll = function (a, b, c) {
 	// 	let allVotes = a + b + c;
 	// 	return allVotes;
@@ -113,10 +113,10 @@ function App() {
 	};
 
 	/* we calculate the average by invoking the calAverage function */
-	const average = calcAverage(good, bad, totalOfAll);
+	const average = calcAverage(good, bad, all);
 
 	/*we calculate the positive percentage by invoking calcPositive function*/
-	const positivePercentage = `${calcPositive(good, totalOfAll)}%`;
+	const positivePercentage = `${calcPositive(good, all)}%`;
 
 	return (
 		<div>
@@ -130,7 +130,7 @@ function App() {
 				good={good}
 				neutral={neutral}
 				bad={bad}
-				totalOfAll={totalOfAll}
+				totalOfAll={all}
 				average={average}
 				positive={positivePercentage}
 			/>
