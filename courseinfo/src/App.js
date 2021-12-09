@@ -1,3 +1,4 @@
+// Header component helps to display the title of the app
 const Header = ({ course }) => {
 	return (
 		<div>
@@ -6,6 +7,9 @@ const Header = ({ course }) => {
 	);
 };
 
+/*The Part component is a child component of which dynamically 
+display the course information and the number of exercises each 
+course has */
 const Part = ({ part, exercise }) => {
 	return (
 		<div>
@@ -16,6 +20,9 @@ const Part = ({ part, exercise }) => {
 	);
 };
 
+/* The Content component is a parent component that maps through the 
+course array and dynamically display information and exercise using 
+the Part component as the child*/
 const Content = ({ parts }) => {
 	return (
 		<div>
@@ -26,6 +33,9 @@ const Content = ({ parts }) => {
 	);
 };
 
+/* The Total component is a dynamic data display components that 
+computes the total of all the exercises by calling a function on 
+each forEach loop */
 const Total = ({ parts }) => {
 	let totalExercise = 0;
 	parts.forEach((part) => (totalExercise += part.exercises));
@@ -36,11 +46,13 @@ const Total = ({ parts }) => {
 	);
 };
 
+/*The App component contains the data and return the composition
+of the whole application */
 function App() {
 	const course = {
 		name: 'Half Stack application development',
 		parts: [
-			{
+			{return	<Part part={part.name} exercise={parts.exercises} />;
 				name: 'Fundamentals of React',
 				exercises: 10,
 			},
