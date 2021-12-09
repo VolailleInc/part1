@@ -46,7 +46,7 @@ const Total = ({ parts }) => {
 	);
 };
 
-/*The App component contains the data and return the composition
+/*The App component contains data and return the composition
 of the whole application */
 function App() {
 	const course = {
