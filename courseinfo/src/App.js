@@ -7,7 +7,7 @@ const Header = ({ course }) => {
 	);
 };
 
-/*The Part component is a child component of which dynamically 
+/*The Part component is a child component, which dynamically 
 display the course information and the number of exercises each 
 course has */
 const Part = ({ part, exercise }) => {
@@ -52,7 +52,7 @@ function App() {
 	const course = {
 		name: 'Half Stack application development',
 		parts: [
-			{return	<Part part={part.name} exercise={parts.exercises} />;
+			{
 				name: 'Fundamentals of React',
 				exercises: 10,
 			},
