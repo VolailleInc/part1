@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-//Reusable component for displaying title
+//Component for displaying title
 const Title = (props) => {
 	return (
 		<div>
@@ -20,7 +20,7 @@ const Button = ({ onClick, text }) => {
 	);
 };
 
-//A component with table to display the value of each statistic
+//A table component that displays the value of each statistic
 const StatisticLine = ({ value, text }) => {
 	return (
 		<div>
@@ -36,7 +36,7 @@ const StatisticLine = ({ value, text }) => {
 	);
 };
 
-//A conditionally rendered no feedback component
+//A conditionally render a no feedback component
 const NoFeedBack = () => {
 	return (
 		<div>
